@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.luisamoncada.calcular.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/Resultado"
+        android:layout_marginBottom="103dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="visible"
+        android:layout_alignEnd="@id/Resultado"
+        android:layout_alignParentEnd="false"
+        android:autoText="true"
+        android:textColor="#43acd6" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="CALCULAR"
+        android:id="@+id/calcular"
+        android:singleLine="true"
+        android:layout_above="@+id/Resultado"
+        android:layout_centerHorizontal="true"
+        android:onClick="Resultado"
+        android:longClickable="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="AREAS"
+        android:id="@+id/INGRESE"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="visible" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/Lado"
+        android:layout_below="@+id/INGRESE"
+        android:layout_alignParentStart="true"
+        android:visibility="visible"
+        android:text="lado" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/Altura"
+        android:layout_below="@+id/Lado"
+        android:layout_alignParentStart="true"
+        android:visibility="visible"
+        android:text="altura" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/Base"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/Altura"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/Altura"
+        android:text="base" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/Radio"
+        android:layout_below="@+id/Base"
+        android:layout_alignParentStart="true"
+        android:text="radio" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/Radio"
+        android:layout_alignEnd="@+id/Resultado"
+        android:layout_above="@+id/calcular">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Circulo"
+            android:id="@+id/aradio"
+            android:layout_above="@+id/aradio"
+            android:layout_alignParentStart="true"
+            android:visibility="visible"
+            android:textColor="#43abdf" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cuadrado"
+            android:id="@+id/acuadrado"
+            android:layout_centerVertical="true"
+            android:layout_alignEnd="@+id/aradio"
+            android:layout_alignParentStart="true"
+            android:visibility="visible"
+            android:textColor="#43abdf" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rectangulo"
+            android:id="@+id/arectangulo"
+            android:layout_above="@+id/aradio"
+            android:layout_alignParentStart="true"
+            android:visibility="visible"
+            android:textColor="#43abdf" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Triangulo"
+            android:id="@+id/atriangulo"
+            android:layout_above="@+id/arectangulo"
+            android:layout_alignParentStart="true"
+            android:singleLine="false"
+            android:visibility="visible"
+            android:textColor="#43abdf" />
+    </RadioGroup>
+
+</RelativeLayout>

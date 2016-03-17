@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.luisamoncada.figuras.MainActivity"
+    tools:showIn="@layout/activity_main"
+    android:background="#d3d3d3">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/area"
+        android:id="@+id/area"
+        android:textColor="#aa23b2"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/Opciones"
+        android:layout_below="@+id/area"
+        android:layout_above="@+id/nbase"
+        android:layout_alignParentEnd="true">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cuadrado"
+            android:id="@+id/cuadrado"
+            android:textColor="#aa23b2"
+            android:visibility="visible"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Triangulo"
+            android:id="@+id/triangulo"
+            android:textColor="#aa23b2"
+            android:visibility="visible" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rectangulo"
+            android:id="@+id/rectangulo"
+            android:textColor="#aa23b2"
+            android:visibility="visible" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cirulo"
+            android:id="@+id/circulo"
+            android:textColor="#aa23b2"
+            android:visibility="visible" />
+    </RadioGroup>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/nbase"
+        android:layout_above="@+id/naltura"
+        android:layout_toStartOf="@+id/area"
+        android:textColor="#5295d3"
+        android:visibility="visible" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/naltura"
+        android:layout_above="@+id/nradio"
+        android:layout_alignParentStart="false"
+        android:layout_alignEnd="@+id/nbase"
+        android:textColor="#5295d3"
+        android:visibility="visible"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/nradio"
+        android:textColor="#5295d3"
+        android:visibility="visible"
+        android:layout_above="@+id/nlado"
+        android:layout_toStartOf="@+id/altura" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/nlado"
+        android:layout_above="@+id/calcular"
+        android:layout_alignParentStart="false"
+        android:layout_alignEnd="@+id/nradio"
+        android:textColor="#5295d3"
+        android:visibility="visible"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Base"
+        android:id="@+id/base"
+        android:textColor="#aa23b2"
+        android:layout_below="@+id/Opciones"
+        android:layout_toEndOf="@+id/nbase"
+        android:visibility="visible" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Altura"
+        android:id="@+id/altura"
+        android:textColor="#aa23b2"
+        android:layout_alignTop="@+id/naltura"
+        android:layout_toEndOf="@+id/naltura"
+        android:visibility="visible" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Radio"
+        android:id="@+id/radio"
+        android:textColor="#aa23b2"
+        android:layout_below="@+id/naltura"
+        android:layout_alignStart="@+id/base"
+        android:visibility="visible" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Lado"
+        android:id="@+id/lado"
+        android:textColor="#aa23b2"
+        android:layout_alignTop="@+id/nlado"
+        android:layout_alignStart="@+id/base"
+        android:visibility="visible" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/calcular"
+        android:layout_alignParentStart="false"
+        android:textColor="#aa23b2"
+        android:visibility="visible"
+        android:text="Calcular"
+        android:singleLine="true"
+        android:onClick="Resultado"
+        android:layout_above="@+id/result"
+        android:longClickable="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:id="@+id/result"
+        android:layout_marginBottom="133dp"
+        android:textColor="#5295d3"
+        android:visibility="visible"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/area" />
+
+</RelativeLayout>
